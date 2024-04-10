@@ -1,0 +1,16 @@
+.main{
+    margin: 2rem 60px;
+    min-height: 77vh;
+}
+
+
+ @media screen and (width <=  960px){
+    .main{
+         margin: 2rem 28px;
+     }
+ }
+ @media screen and (width <=  425px){
+    .main{
+         margin: 1.5rem 15px;
+     }
+ }
