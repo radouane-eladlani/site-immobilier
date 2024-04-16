@@ -9,6 +9,7 @@ import Main from './mis_en_page/Main';
 import PageAccueil from './Pages/PageAccueil';
 import ErreurPageNotFound from './Pages/ErreurPageNotFound';
 import PageApropos from './Pages/PageApropos';
+import Logement from './Pages/Logement';
 
  /*HeaderFooterLayout permet de renseigner les composants pour
   afficher le header et le footer danss chaque page */
@@ -49,6 +50,10 @@ const router = createBrowserRouter([
         path: "/Apropos",
         element: <PageApropos />
       },
+      {
+        path: "/Logement",
+        element : <Logement/>
+      }
 
     ],
   },
