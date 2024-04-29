@@ -1,6 +1,6 @@
 import React from "react";
 import logo from "../assets/images/logo.png"
-import "./Navbar.css";
+import "./Navbar.scss";
 import { NavLink } from "react-router-dom";
 
 /*la function Navbar permet de retourner le composant Navbar avec le style*/

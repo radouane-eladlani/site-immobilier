@@ -1,5 +1,5 @@
 import React from "react";
-import "./Banner.css";
+import "./Banner.scss";
 
 /* la function Banner permet de retourner le composant Banner avec le style 
 dans le fichier Banner.css */

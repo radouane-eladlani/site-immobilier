@@ -1,5 +1,5 @@
 import React from "react"
-import "./Main.css"
+import "./Main.scss"
 /* on utilise la function Main pour avoir les marges dans toute les pages du site */
 function Main(props) {
 /*on utilise props.children pour pouvoir utiliser la function Main dans les

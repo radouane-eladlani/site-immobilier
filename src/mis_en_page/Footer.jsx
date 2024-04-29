@@ -1,5 +1,5 @@
 import React from "react";
-import "./Footer.css";
+import "./Footer.scss";
 import Logo_footer from "../assets/images/Logo_footer.png"
 
 /*la function Footer permet de retourner le composant Footer avec le style*/

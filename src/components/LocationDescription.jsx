@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './LocationDescription.css';
+import './LocationDescription.scss';
 
 /* on utilise la function locationDescription pour afficher le titre et le contenu  */
 export function LocationDescription(props) {

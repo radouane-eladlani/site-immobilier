@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./Card.css";
+import "./Cards.scss";
 
 
-/*la function LocGrille permet de retourner le composant LocGrille avec le style*/
+/*la function permet de retourner le composant avec le style*/
 function Card(props) {
 const state = {
   locationId: props.id,

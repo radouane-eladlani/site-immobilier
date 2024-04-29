@@ -1,5 +1,5 @@
 import React from "react";
-import "./PageApropos.css";
+import "./PageApropos.scss";
 import { LocationDescription } from "../components/LocationDescription";
 
 function PageApropos() {

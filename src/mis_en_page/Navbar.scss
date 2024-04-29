@@ -1,0 +1,38 @@
+.navbar {
+    display: flex;
+    align-items: center;
+    color: #ff6060;
+    font-weight: 700;
+    gap: 3rem;
+    margin-bottom: 2rem;
+
+    @media screen and (max-width: 425px) {
+        gap: 1rem;
+    }
+}
+
+.navbar a {
+    color: black;
+    text-decoration: none;
+
+    @media screen and (max-width: 425px) {
+        font-size: 12px;
+        text-transform: uppercase;
+    }
+}
+
+.navbar a:hover,
+.navbar a.active {
+    text-decoration: underline;
+}
+
+.navbar_logo {
+    margin-right: auto;
+    transform: scale(1.0);
+
+    @media screen and (max-width: 425px) {
+        img {
+            width: 100px;
+        }
+    }
+}

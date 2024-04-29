@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import "./ErreurPageNotFound.css";
+import "./ErreurPageNotFound.scss";
 import Navbar from '../mis_en_page/Navbar';
 import Main from '../mis_en_page/Main';
 

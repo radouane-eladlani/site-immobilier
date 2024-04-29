@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import "./Grille.css";
-import Card from "./Card.jsx";
+import "./Grille.scss";
+import Card from "./Cards.jsx";
 
 
 /*la function locationGrille permet de retourner le composant locationGrille avec le style*/
