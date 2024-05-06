@@ -11,8 +11,9 @@ import ErreurPageNotFound from './Pages/ErreurPageNotFound';
 import PageApropos from './Pages/PageApropos';
 import Logement from './Pages/Logement';
 
- /*HeaderFooterLayout permet de renseigner les composants pour
-  afficher le header et le footer danss chaque page */
+ /* HeaderFooterLayout permet de renseigner les composants pour
+  afficher le header et le footer et la mise en page */
+/* le composant outlet de react router permet d'afficher le contenu dans chaque route */
 const HeaderFooterLayout = () => {
   return (
     <>
@@ -26,23 +27,22 @@ const HeaderFooterLayout = () => {
     </>
   );
 };
-/* on utilise la variable router pour définir les routes de l'application*/
+/* On utilise createBrowserRouter pour définir les routes de l'application*/
 const router = createBrowserRouter([
   {
-    /*
-    on utilise element pour définir le layout de l'application et outlet
+    /* On utilise element pour définir la mise en page de l'application et outlet
     pour afficher les composants dans chaque route */
     element: <HeaderFooterLayout />,
     /*
-    on utilise errorElement pour définir la page d'erreur dans toute les routes */
+    On utilise errorElement pour définir la page d'erreur dans toute les routes en cas d'erreur 
+    dans la route correspondante il affichera le composant ErreurPageNotFound */
     errorElement: <ErreurPageNotFound/>,
-    /*
-    children permet de définir les routes de l'application */
+    /* On utilise children pour permet de définir les routes de l'application */
     children: [
       {
-        /*on utilise path pour définir le chemin de la route */
+        /*On utilise path pour définir le chemin de la route */
         path: "/",
-        /*on utilise element pour définir le composant à afficher */
+        /*On utilise element pour définir le composant à afficher */
         element: <PageAccueil />
 
       },
@@ -51,22 +51,25 @@ const router = createBrowserRouter([
         element: <PageApropos />
       },
       {
-        path: "/Logement",
+        path: "/Logement/:id",
         element : <Logement/>
-      }
+      },
 
+      {
+        path: "*",
+        element : <ErreurPageNotFound/>
+      }
     ],
   },
 ]);
 
-/*
-on utilise la variable root pour définir le composant qui sera affiché dans le DOM*/
+/* on utilise la variable root pour définir le composant qui sera affiché dans le DOM*/
 const root = ReactDOM.createRoot(document.getElementById('root'));
 /* on utilise root.render pour afficher le composant RouterProvider qui permet de
 définir les routes de l'application*/
 root.render(
   /* on utilise React.StrictMode pour afficher les erreurs dans la console */
-  /* on utilise RouterProvider pour définir les routes de l'application */
+  /* on utilise RouterProvider pour définir les routes de l'application et le composant qui sera affiché */
   <React.StrictMode>
     <RouterProvider router={router} />
   </React.StrictMode>,

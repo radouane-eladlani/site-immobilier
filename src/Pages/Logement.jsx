@@ -1,42 +1,51 @@
 import React, { useEffect, useState } from "react";
 import "./Logement.css";
 import { Carousel } from "../components/Carousel";
-import { useLocation } from "react-router-dom";
+import { Navigate, useParams } from "react-router-dom";
 import { LogementProfil } from "../components/LogementProfil.jsx";
 
 function Logement() {
-    const location = useLocation();
-    const [locationData, setLocationData] = useState(null);
-
+    const params = useParams();
+    const [logementData, setLogementData] = useState(null);
+    const [error, setError] = useState(false);
     useEffect(() => {
         const annulerRequete = new AbortController();
-        fetch("logements.json", {
+        fetch("/logements.json", {
             signal: annulerRequete.signal
         })
             .then((response) => response.json())
             .then((apartement) => {
-                const logement = apartement.find((apartement) => apartement.id === location.state.locationId);
-                setLocationData(logement);
+                const logement = apartement.find((apartement) => apartement.id === params.id);
+                if (!logement) {
+                    throw new Error("Logement introuvable");
+                }
+                setLogementData(logement);
             })
-            .catch((error) => console.log(error));
+            .catch((error) => {
+                if (error == "Error: Logement introuvable") {
+                    setError(true);
+                }
+            });
         return () => annulerRequete.abort();
 
-    });
+    }, [params.id]);
+    if (error) {
+        return <Navigate to="/404" />;
+    }
 
-    if (locationData == null) {
+    if (logementData == null) {
         return <div className="loading">loading...</div>
     }
     return (
         <div className="page__location">
             <div>
-                <Carousel pictures={locationData.pictures} />
+                <Carousel pictures={logementData.pictures} />
             </div>
             <div>
-                <LogementProfil locationData={locationData} />
+                <LogementProfil logementData={logementData} />
             </div>
-            </div>
+        </div>
     );
 }
 export default Logement
 
-            

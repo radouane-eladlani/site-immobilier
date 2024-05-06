@@ -1,4 +1,4 @@
-.page_location_titre_de_la_location {
+.page_logement_titre_de_la_location {
     font-weight: 400;
     margin-bottom: 0;
     margin-top: 10px;
@@ -9,7 +9,7 @@
     }
 }
 
-.page_location_titre_ville {
+.page_logement_titre_ville {
     font-weight: 400;
     font-size: 1.1rem;
     margin-top: 5px;
@@ -24,7 +24,7 @@
     flex-direction: column;
 }
 
-.page_location_span {
+.page_logement_span {
     background-color: #FF6060;
     color: white;
     height: 25px;
@@ -41,7 +41,7 @@
     }
 }
 
-.page_location_les_spans {
+.page_logement_les_spans {
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
@@ -55,7 +55,7 @@
     flex-direction: column;
 }
 
-.page_location_profil_proprietaire {
+.page_logement_profil_proprietaire {
     margin-top: 10px;
     margin-bottom: 3%;
     display: flex;
@@ -89,7 +89,7 @@
     }
 }
 
-.page_location_nom_proprietaire {
+.page_logement_nom_proprietaire {
     font-weight: 400;
     font-size: 1.1rem;
     margin-block: 0;
@@ -102,14 +102,14 @@
     }
 }
 
-.page_location_profil_proprietaire_badge img {
+.page_logement_profil_proprietaire_badge img {
     background-color: #c4c4c4;
     height: 64px;
     width: 64px;
     border-radius: 50px;
 }
 
-.page_location_profil_proprietaire_etoile {
+.page_logement_profil_proprietaire_etoile {
     font-size: 1.5em;
 
     @media screen and (max-width: 425px) {
@@ -127,6 +127,11 @@
 .grise {
     color: #e3e3e3;
     padding-right: 10px;
+}
+
+.displayFlexDescription{
+display: flex;
+gap: 30px;
 }
 
 

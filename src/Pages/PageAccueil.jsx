@@ -1,6 +1,6 @@
 import React from "react";
 import Banner from "../components/Banner.jsx";
-import Grille from "../components/Grille.jsx";
+import LesCards from "../components/LesCards.jsx";
 import "./PageAccueil.css";
 
 
@@ -12,7 +12,7 @@ App pour les afficher sur la page */
   return (
     <>
       <Banner/>
-      <Grille/> 
+      <LesCards/> 
     </>
   );
 }

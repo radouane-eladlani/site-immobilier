@@ -27,16 +27,17 @@
   padding: 1rem;
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
+  line-height: 25px;
   font-weight: 300;
   position: relative;
   z-index: -1;
   height: auto;
   margin-top: -10px;
-  color: #FF6060;
+  color: black;
 }
 
 .slide-up {
-  animation: slide-up 0.3s ease-in-out forwards;
+  animation: slide-up 0.3s ease-in-out reverse;
 }
 
 @keyframes slide-up {

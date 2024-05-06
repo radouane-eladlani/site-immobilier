@@ -1,8 +1,7 @@
 import React from "react";
 import "./Banner.scss";
 
-/* la function Banner permet de retourner le composant Banner avec le style 
-dans le fichier Banner.css */
+/* la function Banner permet de retourner le composant Banner avec le style */
 function Banner() {
     return (
         <div className="banner">
