@@ -22,7 +22,7 @@ function Logement() {
                 setLogementData(logement);
             })
             .catch((error) => {
-                if (error == "Error: Logement introuvable") {
+                if (error === "Error: Logement introuvable") {
                     setError(true);
                 }
             });
@@ -37,7 +37,7 @@ function Logement() {
         return <div className="loading">loading...</div>
     }
     return (
-        <div className="page__location">
+        <div className="page__logement">
             <div>
                 <Carousel pictures={logementData.pictures} />
             </div>

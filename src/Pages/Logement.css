@@ -1,0 +1,12 @@
+.page__logement{
+    color: #FF6060;
+    height: 50rem;
+}
+.loading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #FF6060;
+    font-size: 2rem;
+}

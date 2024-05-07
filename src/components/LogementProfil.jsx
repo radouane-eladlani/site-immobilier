@@ -36,9 +36,12 @@ export function LogementProfil(props) {
 
                 </div>
             </div>
-            <div className="displayFlexDescription">
+            <div className="page_logement_description_displayflex">
                 <LogementDescription title="Description" contenu={props.logementData.description} />
-                <LogementDescription title="Equipement" contenu={props.logementData.equipments.map((equipement) => <p>{equipement}</p>)} />
+                <LogementDescription title="Equipements" contenu={props.logementData.equipments.map((equipement) => (
+                        <div className="padding-top" key={equipement}>{equipement}</div>
+                    ))}
+                />
             </div>
         </>
     );

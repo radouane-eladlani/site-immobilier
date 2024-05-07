@@ -44,7 +44,6 @@ const router = createBrowserRouter([
         path: "/",
         /*On utilise element pour définir le composant à afficher */
         element: <PageAccueil />
-
       },
       {
         path: "/Apropos",

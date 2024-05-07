@@ -13,6 +13,7 @@
     font-weight: 400;
     font-size: 1.1rem;
     margin-top: 5px;
+    color: black;
 
     @media screen and (max-width: 425px) {
         font-size: 14px;
@@ -133,5 +134,19 @@
 display: flex;
 gap: 30px;
 }
+.page_logement_description_displayflex{
+    display: flex;
+    gap: 5%;
+}
+@media screen and (width <=  664px){
+    .page_logement_description_displayflex{
+         display: flex;
+         flex-direction: column;
+         gap: 9px;
+         width: 100%;
+     }
+ }
 
-
+ .padding-top{
+    padding-top: 1px;
+}
