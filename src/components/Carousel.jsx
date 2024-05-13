@@ -37,10 +37,15 @@ export function Carousel(props) {
           <i className="fa fa-chevron-right" onClick={suivantePicture}></i>
         </div>
       )}
-
-      <div className="nombrePhoto">
-        {pictureIndex + 1} / {pictures.length}
-      </div>
+{
+  
+}
+{/* Afficher le nombre de photo dans le carousel si plus de une image */}
+{pictures.length > 1 && (
+        <div className="nombrePhoto">
+          {pictureIndex + 1} / {pictures.length}
+        </div>
+      )}
     </div>
   );
 }

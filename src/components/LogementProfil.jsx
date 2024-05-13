@@ -7,7 +7,7 @@ export function LogementProfil(props) {
     /* On utilise la variable name pour afficher le nom et le prenom du proprietaire avec un espace ' ' */
     const name = props.logementData.host.name;
     const [firstName, lastName] = name.split(" ");
-
+/* On recupere les donnees du fichier json */
     return (
         <>
             <div className="display_flex_profil">
@@ -29,13 +29,16 @@ export function LogementProfil(props) {
                         </div>
                     </div>
                     <div className="page_logement_profil_proprietaire_etoile">
+                        {/* Utilisation de la méthode map() pour parcourir un tableau de 1 à 5 afin de générer un nombre correspondant d'étoiles pour la notation */}
                         {[1, 2, 3, 4, 5].map((etoile) => (
+                            // La classe CSS de l'étoile est déterminée par une condition : si la note du logement (props.logementData.rating) est supérieure ou égale au numéro de l'étoile actuelle (etoile), la classe sera "rouge", sinon la classe sera "grise".
                             <span key={etoile} className={props.logementData.rating >= etoile ? "rouge" : "grise"}>★</span>
                         ))}
                     </div>
 
                 </div>
             </div>
+            {/* On utilise la function LogementDescription pour afficher les titres et les contenus */}
             <div className="page_logement_description_displayflex">
                 <LogementDescription title="Description" contenu={props.logementData.description} />
                 <LogementDescription title="Equipements" contenu={props.logementData.equipments.map((equipement) => (

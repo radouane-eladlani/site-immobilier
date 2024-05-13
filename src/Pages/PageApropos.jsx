@@ -2,6 +2,7 @@ import React from "react";
 import "./PageApropos.scss";
 import { LogementDescription } from "../components/LogementDescription";
 
+/* La function PageApropos permet de retourner le composant avec le style */
 function PageApropos() {
     return (
         <>

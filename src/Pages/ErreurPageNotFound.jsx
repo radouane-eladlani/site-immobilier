@@ -3,7 +3,8 @@ import { Link } from 'react-router-dom'
 import "./ErreurPageNotFound.scss";
 import Main from '../mis_en_page/Main';
 
-function ErreurPageNotFound() {
+/* la function ErreurPageNotFound permet de retourner le composant ErreurPageNotFound avec le style */
+export function ErreurPageNotFound() {
   return (
       <Main>
       <div>
